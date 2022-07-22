@@ -10,6 +10,6 @@ public class InsertSessionTimeHandler :IRequestHandler<InsertSessionTimeCommand,
     {
         await _context.SessionTimes.AddAsync(request.SessionT);
         await _context.SaveChangesAsync();
-        return "Session Added Successfully!!";
+        return "Session Added";
     }
 }

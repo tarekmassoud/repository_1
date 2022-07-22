@@ -8,9 +8,8 @@ public class InsertCourseHandler : MediatR.IRequestHandler<InsertCourseCommand, 
     {
         //request.course.EnrolmentDateRange = _context.Courses.First().EnrolmentDateRange;
         var res = _context.Courses.AddAsync(request.course);
-        Console.WriteLine("Result : " + res);
         var r=_context.SaveChanges();
-        return "Inserted Successfully!";
+        return "Course inserted";
         throw new NotImplementedException();
     }
 }

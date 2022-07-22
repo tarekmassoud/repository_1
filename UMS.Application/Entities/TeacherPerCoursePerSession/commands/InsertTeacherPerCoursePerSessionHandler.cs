@@ -15,6 +15,6 @@ public class InsertTeacherPerCoursePerSessionHandler : IRequestHandler<InsertTea
             SessionTimeId = request.STime.Id
         });
         await _context.SaveChangesAsync();
-        return "Teacher registered to course successfully!!";
+        return "Teacher registered";
     }
 }
