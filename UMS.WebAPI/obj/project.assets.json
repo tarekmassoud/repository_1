@@ -14,6 +14,26 @@
           "lib/netstandard2.1/AutoMapper.dll": {}
         }
       },
+      "email/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/DotLiquid.dll": {},
+          "lib/net40/ServiceStack.Text.dll": {},
+          "lib/net40/System.Reactive.dll": {},
+          "lib/net40/email.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DotLiquid.dll": {},
+          "lib/net40/ServiceStack.Text.dll": {},
+          "lib/net40/System.Reactive.dll": {},
+          "lib/net40/email.dll": {}
+        },
+        "resource": {
+          "lib/net40/it/DotLiquid.resources.dll": {
+            "locale": "it"
+          }
+        }
+      },
       "MediatR/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -309,6 +329,27 @@
         "icon.png",
         "lib/netstandard2.1/AutoMapper.dll",
         "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
+    "email/1.1.1": {
+      "sha512": "LTWXouYbte766KvV7F4nfCYe7kTSgv2ra8/bbFGASDzeUWjxInTXjaO+v2cYxP/v4WJyHL5kvgRVvjTvI87fJg==",
+      "type": "package",
+      "path": "email/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "email.1.1.1.nupkg.sha512",
+        "email.nuspec",
+        "lib/net40/DotLiquid.dll",
+        "lib/net40/ServiceStack.Text.dll",
+        "lib/net40/ServiceStack.Text.xml",
+        "lib/net40/System.Reactive.dll",
+        "lib/net40/System.Reactive.xml",
+        "lib/net40/email.dll",
+        "lib/net40/email.pdb",
+        "lib/net40/it/DotLiquid.resources.dll"
       ]
     },
     "MediatR/10.0.1": {
@@ -891,7 +932,8 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.7",
       "NodaTime >= 3.1.0",
       "Npgsql >= 7.0.0-preview.6",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "email >= 1.1.1"
     ]
   },
   "packageFolders": {
@@ -958,6 +1000,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"
+          },
+          "email": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           }
         },
         "imports": [
@@ -981,5 +1027,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'email 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "email",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -1,6 +1,15 @@
-﻿namespace UMS.Application.Entities.TeacherPerCourse.Commands;
+﻿using MediatR;
+using UMS.Persistence;
 
-public class InsertTeacherPerCourseHandler
+namespace UMS.Application.Entities.TeacherPerCourse.Commands;
+
+public class InsertTeacherPerCourseHandler : IRequestHandler<InsertTeacherPerCourseCommand,string>
 {
-    
+    private readonly umsContext _context = new umsContext();
+    public async Task<string> Handle(InsertTeacherPerCourseCommand request, CancellationToken cancellationToken)
+    {
+        await _context.TeacherPerCourses.AddAsync(request._teacherPerCourse, cancellationToken);
+        _context.SaveChanges();
+        return "Course Registered Successfully!";
+    }
 }

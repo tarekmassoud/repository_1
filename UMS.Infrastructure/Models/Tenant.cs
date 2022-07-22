@@ -1,6 +1,12 @@
-﻿namespace UMS.Infrastructure.Models;
+﻿using System;
+using System.Collections.Generic;
 
-public class Tenant
+namespace UMS.Infrastructure.Models
 {
-    
+    public partial class Tenant
+    {
+        public int Tenant1Id { get; set; }
+        public int Tenant2Id { get; set; }
+        public int Tenant3Id { get; set; }
+    }
 }
