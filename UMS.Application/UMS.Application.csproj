@@ -12,4 +12,9 @@
       <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Entities\TeacherPerCoursePerSession\Queries" />
+      <Folder Include="Entities\TeacherPerCourse\Queries" />
+    </ItemGroup>
+
 </Project>
