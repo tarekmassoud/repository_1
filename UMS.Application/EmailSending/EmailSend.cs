@@ -15,6 +15,6 @@ public class EmailSend
         var rng = new Random();
         var message = new Message(new EmailAddress [] { receiver }, subject, content);
         _emailSender.SendEmailAsync(message);
-        return "Email Sent Successfully!!";
+        return "Email Sent";
     }
 }

@@ -10,6 +10,6 @@ public class InsertTeacherPerCourseHandler : IRequestHandler<InsertTeacherPerCou
     {
         await _context.TeacherPerCourses.AddAsync(request._teacherPerCourse, cancellationToken);
         _context.SaveChanges();
-        return "Course Registered Successfully!";
+        return "Course Registered";
     }
 }
